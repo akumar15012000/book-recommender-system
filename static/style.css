@@ -1,0 +1,34 @@
+body{
+    background-color: whitesmoke;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.rating{
+    color: rebeccapurple;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+    font-weight: 600;
+}
+
+
+form{
+  
+    margin-top: 100px;
+    align-items: center;
+    width: 70%;
+    margin-left: 15%;
+   
+}
+
+button{
+    margin: 20px;
+    margin-left: 0px;
+}
+.container{
+    margin-top: 5%;
+
+}
