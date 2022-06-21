@@ -32,3 +32,32 @@ button{
     margin-top: 5%;
 
 }
+.col{
+    padding: 20px;
+}
+img{
+    width: 150px; 
+    height: 150px;
+
+
+}
+@media only screen and (max-width: 370px) {
+    body {
+      background-color: orange;
+    }
+    img{
+        width: 100px; 
+        height: 150px;
+    
+    
+    }
+    .navbar-brand{
+        width: 50%;
+        font-size: 80%;
+    }
+    
+    form{
+        margin-top: 50px;
+    }
+
+  }

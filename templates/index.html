@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Book Recommendation System</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
   </head>
@@ -37,8 +37,8 @@
 
         {% for i in range(50) %}
 
-        <div class="col" style="padding: 20px;">
-          <img style="width: 150px; height:150px" src={{ url_list[i] }} alt="Img">
+        <div class="col">
+          <img src={{ url_list[i] }} alt="Img">
           
           <a href="https://www.google.com/search?q={{ book_title[i]+author[i] }}" target="_blank">
             <p>{{ book_title[i][0:40] }}</p>
