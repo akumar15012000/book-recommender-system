@@ -4,14 +4,19 @@ import numpy as np
 from difflib import SequenceMatcher,get_close_matches
 
 
+def modify_url(url_list):
+
+    for i in range(len(url_list)):
+        url_list[i]=url_list[i].replace('http','https')
+        url_list[i]=url_list[i].replace('images.amazon.com','images-na.ssl-images-amazon.com')
+    
+    return url_list
+
 
 
 def url_list():
     popular_50=top_50()
-    popular_50.iloc[:,1]=popular_50.iloc[:,1].apply(lambda x:x.replace('http','https'))
-    popular_50.iloc[:,1]=popular_50.iloc[:,1].apply(lambda x:x.replace('images.amazon.com','images-na.ssl-images-amazon.com'))
-
-    return popular_50.iloc[:,1]
+    return modify_url(popular_50.iloc[:,1])
 
 def book_title():
     popular_50=top_50()
@@ -80,7 +85,7 @@ def recommend(book_name):
     df=Recommend_Book(book_name)
     obj.Book_Title=df['Book-Title']
     obj.Book_Author=df['Book-Author']
-    obj.url_list=df['Image-URL-M']
+    obj.url_list=modify_url(df['Image-URL-M'])
 
     return obj
 
