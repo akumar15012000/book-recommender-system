@@ -6,7 +6,7 @@ from difflib import SequenceMatcher,get_close_matches
 
 def url_list():
     popular_50=top_50()
-    popular_50=popular_50.iloc[:,1].apply(lambda x:x.replace('.jpg',''))
+    popular_50=popular_50.iloc[:,1].apply(lambda x:x.replace('.jpg','.png'))
     return popular_50
 
 def book_title():
