@@ -6,7 +6,8 @@ from difflib import SequenceMatcher,get_close_matches
 
 def url_list():
     popular_50=top_50()
-    return popular_50.iloc[:,1]
+    popular_50=popular_50.iloc[:,1].apply(lambda x:x.replace('.jpg','.jpeg'))
+    return popular_50
 
 def book_title():
     popular_50=top_50()
@@ -86,4 +87,4 @@ class rec():
         pass
 
 
-
+print(url_list()[0])
