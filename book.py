@@ -4,10 +4,14 @@ import numpy as np
 from difflib import SequenceMatcher,get_close_matches
 
 
+
+
 def url_list():
     popular_50=top_50()
-    popular_50=popular_50.iloc[:,1].apply(lambda x:x.replace('.jpg','.png'))
-    return popular_50
+    popular_50.iloc[:,1]=popular_50.iloc[:,1].apply(lambda x:x.replace('http','https'))
+    popular_50.iloc[:,1]=popular_50.iloc[:,1].apply(lambda x:x.replace('images.amazon.com','images-na.ssl-images-amazon.com'))
+
+    return popular_50.iloc[:,1]
 
 def book_title():
     popular_50=top_50()
