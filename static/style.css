@@ -51,6 +51,7 @@ img{
     .navbar-brand{
         width: 50%;
         font-size: 80%;
+        font-weight: 1000;
     }
     
     form{
